@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries Api</title>
+    <!-- unIcons -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- My Css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="top-header">
+        <div class="container">
+            <div class="row top-bar-wrapper">
+                <h2 class="heading-text">Where in the world?</h2>
+                <button class="switcher" onclick="toggleMode()">
+                    <i class="uil uil-moon"></i>
+                    <span>Dark Mode</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal-container">
+        <div class="container">
+            <button onclick="modal.style.display = 'none'" class="back-arrow"> <i class="uil uil-arrow-left"></i>
+                Back</button>
+            <div class="single-country-details">
+
+            </div>
+        </div>
+    </div>
+
+    <main class="countries">
+        <div class="container">
+            <div class="row countries-wrapper">
+                <div class="search-bar">
+                    <i class="uil uil-search-plus"></i>
+                    <input type="search" name="" placeholder="Search for a country" onkeyup="searchFunction()"
+                        id="search">
+                </div>
+                <div class="filter-option" onclick="showDropdown()">
+
+                    <span class="filterRegion">Filter By Region</span>
+                    <i class="uil uil-angle-down"></i>
+                    <ul class="dropdown" onclick="filterRegion(event)">
+                        <li>All</li>
+                        <li>Africa</li>
+                        <li>America</li>
+                        <li>Asia</li>
+                        <li>Europe</li>
+                        <li>Oceania</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="country-grid">
+
+            </div>
+
+        </div>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

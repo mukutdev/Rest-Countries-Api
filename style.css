@@ -1,0 +1,218 @@
+/* Google font poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--secondary-color);
+}
+
+/* Color scheme */
+:root {
+  --primary-color: #fff;
+  --secondary-color: #fafafa;
+  --text-primary-color: #1a1b1d;
+  --text-light-color: #3a3939;
+  --text-info-color: #6b6b6b;
+}
+body.dark {
+  --primary-color: #2b3743;
+  --secondary-color: #202d36;
+  --text-primary-color: #fff;
+  --text-info-color: #a3a3a3;
+}
+.container {
+  width: 1300px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.top-header {
+  background-color: var(--primary-color);
+  width: 100%;
+}
+.top-bar-wrapper {
+  justify-content: space-between;
+  padding: 15px 0;
+  color: var(--text-primary-color);
+}
+.switcher {
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--text-primary-color);
+}
+.countries {
+  padding: 50px 0;
+}
+.countries-wrapper {
+  justify-content: space-between;
+}
+.search-bar {
+  background-color: var(--primary-color);
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.search-bar input {
+  width: 320px;
+  border: none;
+  font-size: 16px;
+  padding: 0 20px;
+  color: var(--text-primary-color);
+  height: 50px;
+  outline: none;
+  background-color: var(--primary-color);
+}
+.search-bar i {
+  font-size: 18px;
+  color: var(--text-primary-color);
+}
+.filter-option {
+  background: var(--primary-color);
+  padding: 0 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+  position: relative;
+  line-height: 50px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  color: var(--text-primary-color);
+}
+.dropdown {
+  background: var(--primary-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  position: absolute;
+  list-style: none;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+  display: none;
+  color: var(--text-primary-color);
+  transition: 0.3s ease-in;
+}
+.showUl {
+  display: block;
+}
+.rotate_i {
+  transform: rotate(360deg);
+}
+.dropdown li {
+  width: 100%;
+  padding: 0 20px;
+}
+.dropdown li:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-primary-color);
+  width: 100%;
+}
+.uil-angle-down {
+  position: absolute;
+  right: 5%;
+  font-size: 24px;
+  transition: 0.3s ease-in;
+}
+.country-grid {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.country-info {
+  background: var(--primary-color);
+  cursor: pointer;
+}
+.country-img {
+  max-height: 155px;
+}
+.country-img img {
+  width: 100%;
+  max-height: 155px;
+}
+.country-name {
+  color: var(--text-primary-color);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 20px;
+}
+.country-details {
+  padding: 15px 20px;
+  font-size: 15px;
+  color: var(--text-primary-color);
+}
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+::placeholder {
+  color: var(--text-primary-color);
+}
+
+/* single country css */
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  z-index: 1;
+  padding: 100px 0px;
+  display: none;
+}
+.back-arrow {
+  outline: none;
+  border: none;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 24%);
+  padding: 10px 40px;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--text-primary-color);
+}
+.single-country-details {
+  display: flex;
+  margin: 100px auto;
+  justify-content: space-between;
+  color: var(--text-primary-color);
+}
+.country-single-img {
+  width: 45%;
+}
+.country-single-img img {
+  width: 100%;
+}
+.single-country-details-wrapper {
+  width: 45%;
+}
+.country-info-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  line-height: 44px;
+}
+.country-info-wrapper p {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary-color);
+}
+.country-info-wrapper p span {
+  color: var(--text-info-color);
+  font-weight: 400;
+}
