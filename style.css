@@ -216,3 +216,29 @@ input[type="search"]::-webkit-search-cancel-button {
   color: var(--text-info-color);
   font-weight: 400;
 }
+.borders{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.borders-title{
+  font-weight: 600;
+  color: var(--text-primary-color);
+}
+.borders-list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.borders-list a{
+  text-decoration: none;
+ 
+}
+.borders-list a p{
+  margin: 5px;
+  padding:12px;
+  border:2px solid #fafafa;
+  min-width: 120px;
+  text-align: center;
+  color: var(--text-info-color);
+}

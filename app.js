@@ -149,8 +149,49 @@ const showSingleCountryDetails = country =>
                         </div>
                     </div>
 
+                    <div class="borders">
+                    <p class="borders-title">Border Countries:</p>
+                    <span class="borders-list">
+
+                    </span>
+                    </div>
+
                </div>
-    
     `
-        ;
+
+    // border display function 
+
+    function displayBorders()
+    {
+        const borderBox = document.querySelector('.borders-list')
+        const bordersName = country.borders;
+
+        if (bordersName === undefined)
+        {
+            borderBox.innerHTML = `
+              
+            <p>No border found</p>
+            `
+        } else
+        {
+            for (let i = 0; i < bordersName.length; i++)
+            {
+                const element = bordersName[i];
+                const createAnchor = document.createElement('a');
+                createAnchor.innerHTML = `
+           <p>${element}</p>
+     `
+                borderBox.appendChild(createAnchor);
+
+            }
+        }
+
+
+    }
+    displayBorders(country);
+
+
+
+
+
 }
